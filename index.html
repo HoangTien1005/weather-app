@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <input id="searchBox" type="search" placeholder="Nhập tên thành phố: " />
+      <p id="city-name"></p>
+      <p id="description"></p>
+      <img alt="" class="weather-icon" aria-placeholder="" />
+      <p id="temp"></p>
+      <p id="humidity"></p>
+      <p id="wind"></p>
+      <p id="time"></p>
+    </div>
+
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script src="weather_API.js"></script>
+  </body>
+</html>
