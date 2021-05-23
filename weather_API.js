@@ -21,7 +21,7 @@ input.addEventListener("change", (e) => {
 
 function getData(value, api_key) {
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${api_key}&lang=vi`
+    `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${api_key}&lang=vi`
   ).then(async (response) => {
     const data = await response.json();
     if (data.message === "city not found") {
