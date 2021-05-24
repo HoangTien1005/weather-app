@@ -9,15 +9,9 @@ var description = document.querySelector("#description");
 var img = document.querySelector(".weather-icon");
 var city_time = document.querySelector("#time");
 
-var d = new Date();
-var utc_offset = d.getTimezoneOffset();
-d.setMinutes(d.getMinutes() + utc_offset);
-
-
 input.addEventListener("change", (e) => {
-   getData(e.target.value, API_KEY);
+  getData(e.target.value, API_KEY);
 });
-
 
 function getData(value, api_key) {
   fetch(
@@ -39,6 +33,10 @@ function getData(value, api_key) {
       description.innerHTML = data.weather[0].description;
       img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
+
+      var d = new Date();
+      var utc_offset = d.getTimezoneOffset();
+      d.setMinutes(d.getMinutes() + utc_offset);
       var city_offset = data.timezone / 60;
       d.setMinutes(d.getMinutes() + city_offset);
       var hours = d.getHours();
