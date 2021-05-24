@@ -31,7 +31,7 @@ function getData(value, api_key) {
         Math.round((data.wind.speed * 3.6 + Number.EPSILON) * 100) / 100;
       wind.innerHTML = `Gió: ${windSpeed}km/h`;
       description.innerHTML = data.weather[0].description;
-      img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
 
       var d = new Date();
