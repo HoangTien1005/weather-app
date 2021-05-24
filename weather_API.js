@@ -25,7 +25,7 @@ function getData(value, api_key) {
       city.innerHTML = data.name;
       humidity.innerHTML = `Độ ẩm: ${data.main.humidity}%`;
       let temperature =
-        Math.round((data.main.temp - 273.15 + Number.EPSILON) * 10) / 10;
+        Math.round((data.main.temp + Number.EPSILON) * 10) / 10;
       temp.innerHTML = `${temperature}°C`;
       let windSpeed =
         Math.round((data.wind.speed * 3.6 + Number.EPSILON) * 100) / 100;
