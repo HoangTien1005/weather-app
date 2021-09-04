@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css" />
+
   </head>
   <body>
     <div class="container">
-      <input id="searchBox" type="search" placeholder="Nhập tên thành phố: " />
-      <p id="city-name"></p>
-      <p id="description"></p>
-      <img alt="" class="weather-icon" aria-placeholder="" />
-      <p id="temp"></p>
-      <p id="humidity"></p>
-      <p id="wind"></p>
-      <p id="time"></p>
+      <div class="grid wide">
+        <div class="row blur-background-cover">
+          <div class="col l-12 m-12 c-12">
+            <form class="search-box__container" id="search-form" onsubmit="return false">
+              <input class="search-box__input" type="search" placeholder="Nhập tên thành phố:" />
+              <button type="submit">
+                <i class="search-box__icon fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <div class="weather-data__container col l-12 m-12 c-12">
+            <div class="row">
+              <div class="col l-12 m-12 c-12">
+                <h3 id="city-name"></h3>
+              </div>
+              <div class="col l-12 m-12 c-12">
+                <div class="weather-icon__container">
+                  <img alt="" class="weather-icon" aria-placeholder="" />
+                </div>
+                <p id="description"></p>
+              </div>
+              <div class="weather-data-number__container col l-12 m-12 c-12">
+                <div class="row">
+                  <div class="col l-6 m-6 c-6">
+                    <p class="weather-data-number" id="temp"></p>
+                  </div>
+                  <div class="col l-6 m-6 c-6">
+                    <p class="weather-data-number" id="humidity"></p>
+                  </div>
+                  <div class="col l-6 m-6 c-6">
+                    <p class="weather-data-number" id="wind"></p>
+                  </div>
+                  <div class="col l-6 m-6 c-6">
+                    <p class="weather-data-number" id="time"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
-    <script src="weather_API.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
