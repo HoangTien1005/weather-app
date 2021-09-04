@@ -9,6 +9,11 @@ var description = document.querySelector("#description");
 var img = document.querySelector(".weather-icon");
 var city_time = document.querySelector("#time");
 
+const body = document.querySelector('body');
+
+
+window.addEventListener("orientationchange", updateLayout, false);
+
 input.addEventListener("change", (e) => {
   getData(e.target.value, API_KEY);
 });
@@ -40,6 +45,7 @@ function getData(value, api_key) {
       var city_offset = data.timezone / 60;
       d.setMinutes(d.getMinutes() + city_offset);
       var hours = d.getHours();
+      if (hours < 10) hours = "0" + hours;
       var minutes = d.getMinutes();
       if (minutes < 10) minutes = "0" + minutes;
       var seconds = d.getSeconds();
@@ -47,4 +53,14 @@ function getData(value, api_key) {
       city_time.innerHTML = `Thời gian: ${hours}:${minutes}:${seconds}`;
     }
   });
+}
+
+
+function updateLayout() {
+  if(window.innerWidth > window.innerHeight && window.innerHeight < 813) {
+    body.classList.remove("height-plus-160");
+  }
+  else if(window.innerWidth < window.innerHeight && window.innerHeight < 813){
+    body.classList.add("height-plus-160");
+  }
 }
