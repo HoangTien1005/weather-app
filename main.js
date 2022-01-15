@@ -1,13 +1,13 @@
 const API_KEY = "26f3723aadc42cdb29582dc1f7374be9";
 
-var input = document.querySelector("input");
-var city = document.querySelector("#city-name");
-var humidity = document.querySelector("#humidity");
-var temp = document.querySelector("#temp");
-var wind = document.querySelector("#wind");
-var description = document.querySelector("#description");
-var img = document.querySelector(".weather-icon");
-var city_time = document.querySelector("#time");
+const input = document.querySelector("input");
+const city = document.querySelector("#city-name");
+const humidity = document.querySelector("#humidity");
+const temp = document.querySelector("#temp");
+const wind = document.querySelector("#wind");
+const description = document.querySelector("#description");
+const img = document.querySelector(".weather-icon");
+const city_time = document.querySelector("#time");
 
 const body = document.querySelector('body');
 
@@ -39,16 +39,16 @@ function getData(value, api_key) {
       img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
 
-      var d = new Date();
-      var utc_offset = d.getTimezoneOffset();
+      let d = new Date();
+      let utc_offset = d.getTimezoneOffset();
       d.setMinutes(d.getMinutes() + utc_offset);
-      var city_offset = data.timezone / 60;
+      let city_offset = data.timezone / 60;
       d.setMinutes(d.getMinutes() + city_offset);
-      var hours = d.getHours();
+      let hours = d.getHours();
       if (hours < 10) hours = "0" + hours;
-      var minutes = d.getMinutes();
+      let minutes = d.getMinutes();
       if (minutes < 10) minutes = "0" + minutes;
-      var seconds = d.getSeconds();
+      let seconds = d.getSeconds();
       if (seconds < 10) seconds = "0" + seconds;
       city_time.innerHTML = `Thời gian: ${hours}:${minutes}:${seconds}`;
     }
