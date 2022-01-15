@@ -20,9 +20,16 @@
       <div class="grid wide">
         <div class="row blur-background-cover">
           <div class="col l-12 m-12 c-12">
+            <div class="language-container">
+                <select name="language" id="language">
+                  <option value="vi">Vietnamese</option>
+                  <option value="us">English</option>
+                  <option value="fr">French</option>
+                </select>
+            </div>
             <form class="search-box__container" id="search-form" onsubmit="return false">
-              <input class="search-box__input" type="search" placeholder="Nhập tên thành phố:" />
-              <button type="submit">
+              <input class="search-box__input" type="search"/>
+              <button class="search-btn" type="submit">
                 <i class="search-box__icon fas fa-search"></i>
               </button>
             </form>

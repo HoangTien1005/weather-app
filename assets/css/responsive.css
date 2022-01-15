@@ -29,6 +29,11 @@
         line-height: 1.8rem;
     }
 
+    #language {
+        width: 120px;
+        font-size: 1.6rem;
+    }
+
     .weather-data-number__container {
         margin-top: 70px;
     }

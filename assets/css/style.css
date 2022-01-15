@@ -37,7 +37,7 @@ body {
 }
 
 .blur-background-cover {
-  padding: 32px 0 ;
+  padding: 12px 0 20px;
   border: 2px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.07);
   min-height: 450px;
@@ -86,8 +86,8 @@ button {
 
 .search-box__icon {
   color: #928e8e;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
   outline: none;
   padding: 4px;
   cursor: pointer;
@@ -136,4 +136,24 @@ button {
 .weather-data-number {
   font-size: 2.4rem;
   line-height: 2.8rem;
+}
+
+.language-container {
+  text-align: end;
+  color: #fff;
+  font-size: 1.6rem;
+  margin-right: 8px;
+  margin-bottom: 40px;
+}
+
+#language {
+  width: 200px;
+  padding: 8px;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 1.8rem;
+  opacity: 0.7;
 }
